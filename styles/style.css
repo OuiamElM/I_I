@@ -1,0 +1,72 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+
+/* naar een idee van Jen Simmons */
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+body {
+  margin:0;
+  background-image: url(../images/cherry.png);
+  background-size: cover;
+}
+
+button:not([disabled]) {
+  cursor:pointer;
+}
+
+img:nth-of-type(1) {
+  max-width:7%;
+  display: block;
+  margin: auto;
+  margin-top: 19.5em;
+  margin-left: 54em;
+}
+
+img:nth-of-type(2) {
+  max-width:7%;
+  display: block;
+  margin: auto;
+  margin-top: -6.5em;
+  margin-right: 28em;
+}
+
+
+img:nth-of-type(3) {
+  max-width:40%;
+  display: block;
+  margin: auto;
+  margin-top: -19em;
+  margin-left: 3em;
+
+}
+
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+:root {
+  --color-headings:crimson
+  /* ... */
+
+}
+
+
+
+
+
+/********************/
+/* ALGEMENE STYLING */
+/********************/
+
+h1 {
+  color:var(--color-headings);
+}
+
+/* ... */
+
+

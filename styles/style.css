@@ -37,11 +37,12 @@ button:not([disabled]) {
 
 body {
   margin: 0;
-  background-image: url(../images/back2.png), url(../images/back1.png); 
+  background-image: url(../images/back2.png),url(../images/back1.png); 
   background-size: 100% 100%;/* breedte en hoogte*/
   background-repeat: no-repeat;
   min-height: 1000vh; /* minimum om te scrollen*/
   overflow-y: auto; /* Verticaal scrollen mogelijk */
+  overflow-x: hidden;
 }
 
 body p{
@@ -51,6 +52,44 @@ body p{
   text-shadow: 2px 2px 2px #000;
   
   
+}
+body::before {
+  content: "";
+  background-image: url(../images/back2.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+ 
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  background-image: url(../images/wolk1.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin-top: 45em;
+  opacity: 0.9;
+
+  /* Animation */
+  animation: slideAnimation 1s ease-in-out infinite;
+  animation-duration: 30s;
+  animation-iteration-count:infinite;
+}
+
+
+@keyframes slideAnimation {
+    0% {
+        left: -15%; /* Start position, off the left side */
+    }
+
+    50% {
+      left: 10%; /* End position, off the right side */
+  }
+    100% {
+        left: -40%; /* End position, off the right side */
+    }
 }
 
 /****************/
@@ -103,9 +142,25 @@ header img:nth-of-type(3){
   position: absolute;
   margin-top: 10em;
   margin-left: 40em;
-  
+
+  /*Animation*/
+	animation-name: slide;
+	animation-duration: 5s;
+	animation-iteration-count:1;
  
 }
+
+  @keyframes slide {
+    0% {
+      transform:translateX(30rem);
+    }
+    
+    100% {
+      transform:translateX(0);
+    }
+  }
+ 
+
 
 
 /****************/

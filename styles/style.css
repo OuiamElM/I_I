@@ -1,46 +1,12 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-
-/* naar een idee van Jen Simmons */
 *, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-body {
-  margin:0;
-  background-image: url(../images/cherry.png);
-  background-size: cover;
+  box-sizing: border-box;  
 }
 
 button:not([disabled]) {
-  cursor:pointer;
-}
-
-img:nth-of-type(1) {
-  max-width:7%;
-  display: block;
-  margin: auto;
-  margin-top: 19.5em;
-  margin-left: 54em;
-}
-
-img:nth-of-type(2) {
-  max-width:7%;
-  display: block;
-  margin: auto;
-  margin-top: -6.5em;
-  margin-right: 28em;
-}
-
-
-img:nth-of-type(3) {
-  max-width:40%;
-  display: block;
-  margin: auto;
-  margin-top: -19em;
-  margin-left: 3em;
-
+  cursor: pointer;
 }
 
 
@@ -48,25 +14,399 @@ img:nth-of-type(3) {
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
-
 :root {
-  --color-headings:crimson
-  /* ... */
+	--color-text:#ffffff;
+
+	--a-text-color: #0475a1;
+	--a-font:Arial;
+
+	--main-font-chunk: "hiro_misake", Helvetica, Arial;
+	--main-text-color: #ffffff;
+	--main-background-color: #d7e9fa;
 
 }
-
-
-
-
 
 /********************/
 /* ALGEMENE STYLING */
 /********************/
-
-h1 {
-  color:var(--color-headings);
+@font-face {
+	font-family: "hiro_misake";
+	src: url(../assets/hiro_misake/HIROMISAKE.ttf);
 }
 
+
+body {
+  margin: 0;
+  background-image: url(../images/back2.png), url(../images/back1.png); 
+  background-size: 100% 100%;/* breedte en hoogte*/
+  background-repeat: no-repeat;
+  min-height: 1000vh; /* minimum om te scrollen*/
+  overflow-y: auto; /* Verticaal scrollen mogelijk */
+}
+
+body p{
+  color: #ffffff;
+  font-family: "hiro_misake",'Helvetice','Ariel';
+  line-height: 25px;
+  text-shadow: 2px 2px 2px #000;
+  
+  
+}
+
+/****************/
+/* HEADER */
+/****************/
+header{
+  /*Display*/
+  display:grid;
+	position:relative;
+	place-items:center;
+}
+
+header img:nth-of-type(1){
+  /*Display*/
+  width: 40%; 
+  height: auto; 
+  display: block; 
+  margin: auto;
+  padding-top: 2em;
+}
+
+header img:nth-of-type(2){
+  /*Display*/
+  width: 45%; 
+  height: auto; 
+  margin-top: 1em;
+  margin-left: -40em;
+}
+
+header p {
+   /*Display*/
+  position: absolute;
+  margin: 0; 
+  margin-top: 13em;
+  margin-left: 8em;
+  margin-right: 47em;
+  z-index: 10;
+
+  /*Text*/
+  font-size: 1em;
+ 
+}
+
+header img:nth-of-type(3){
+  /*Display*/
+  width: 30%; 
+  height: auto; 
+  display: block; 
+  margin: auto;
+  position: absolute;
+  margin-top: 10em;
+  margin-left: 40em;
+  
+ 
+}
+
+
+/****************/
+/* MAIN */
+/****************/
+
+main section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/****************************************/
+/* Section 1 - Afbeelding, tekst en knop */
+/****************************************/
+main section:nth-of-type(1) {
+  margin-top: 65em;
+}
+
+main section:nth-of-type(1) img:nth-of-type(1) {
+  width: 85%;
+  margin-left: 10em;
+}
+
+main section:nth-of-type(1) img:nth-of-type(2) {
+  width: 50%;
+  margin-top: -2em;
+  margin-left: 4em;
+}
+
+main section:nth-of-type(1) p {
+  font-size: 1em;
+  position: absolute;
+  margin-top: 2.5em;
+  margin-left: 16em;
+  margin-right: 42em;
+
+}
+
+/****************************************/
+/* Section 2 - Afbeelding, tekst en knop */
+/****************************************/
+main section:nth-of-type(2) {
+ margin-top: 10em;
+}
+
+main section:nth-of-type(2) img:nth-of-type(1) {
+  width: 55%;
+  margin-left: 12.5em;
+ margin-top: -2em;
+}
+
+main section:nth-of-type(2) img:nth-of-type(2) {
+  width: 85%;
+  margin-left: -5em;
+  margin-top: -2em;
+}
+
+main section:nth-of-type(2) p {
+  font-size: 1em;
+  position: absolute;
+  margin-left: 41em;
+  margin-right: 18em;
+  margin-top: 0.5em;
+
+}
+
+/****************************************/
+/* Section 3 - Afbeelding, tekst en knop */
+/****************************************/
+main section:nth-of-type(3) {
+  margin-top: 27em;
+}
+
+main section:nth-of-type(3) img:nth-of-type(1) {
+  width: 85%;
+  margin-top: 4em;
+  margin-left: 10.5em;
+}
+
+main section:nth-of-type(3) img:nth-of-type(2) {
+  width: 50%;
+  margin-left: 4em;
+}
+
+main section:nth-of-type(3) p {
+  font-size: 1em;
+  position: absolute;
+  margin-top: 6.3em;
+  margin-left: 17em;
+  margin-right: 42em;
+
+}
+
+/****************************************/
+/* Section 4 - Afbeelding, tekst en knop */
+/****************************************/
+main section:nth-of-type(4) {
+  margin-top: 5em;
+}
+
+main section:nth-of-type(4) img:nth-of-type(1) {
+  width: 50%;
+  margin-left: 14em;
+}
+
+main section:nth-of-type(4) img:nth-of-type(2) {
+  width: 83%;
+  margin-left: -6em;
+  margin-top: 2em;
+}
+
+main section:nth-of-type(4) p {
+  font-size: 1em;
+  position: absolute;
+  margin-top: 4em;
+  margin-left: 40em;
+  margin-right: 20em;
+  
+
+ 
+}
+
+/****************************************/
+/* Section 5 - Afbeelding, tekst en knop */
+/****************************************/
+main section:nth-of-type(5) {
+  margin-top: 28em;
+}
+
+main section:nth-of-type(5) img:nth-of-type(1) {
+  width: 85%;
+  margin-left: 12.5em;
+  margin-top: -1em;
+}
+
+main section:nth-of-type(5) img:nth-of-type(2) {
+  width: 40%;
+  margin-left: 6em;
+
+}
+
+main section:nth-of-type(5) p {
+  font-size: 1em;
+  position: absolute;
+  margin-top: 2em;
+  margin-left: 19em;
+  margin-right: 41em;
+
+}
+
+/****************************************/
+/* Section 6 - Afbeelding, tekst en knop */
+/****************************************/
+main section:nth-of-type(6) {
+  margin-top: 7em;
+  margin-bottom: -15em;
+}
+
+main section:nth-of-type(6) img:nth-of-type(1) {
+  width: 45%;
+  margin-left: 15em;
+  margin-top: 4em;
+}
+
+main section:nth-of-type(6) img:nth-of-type(2) {
+  width: 80%;
+  margin-left: -6em;
+  margin-top: 3em;
+}
+
+main section:nth-of-type(6) p {
+  font-size: 1em;
+  position: absolute;
+  margin-top: 5em;
+  margin-left: 39.5em;
+  margin-right: 20.5em;
+}
+
+
+
+
+/****************/
+/* Footer */
+/****************/
+footer{
+  display: flex;
+  margin-top: 48em;
+}
+/****************************************/
+/* Sestion 1 - Afbeeling, tekst         */
+/****************************************/
+footer section:nth-of-type(1){
+  margin-top: 8em;
+}
+footer section:nth-of-type(1) img:nth-of-type(1){
+  /*Display*/
+ width: 50%; 
+ height: auto; 
+ display: block; 
+ margin: auto;
+ margin-left: 20em;
+margin-bottom: 2em;
+z-index: 10;
+
+}
+
+footer section:nth-of-type(1) img:nth-of-type(2){
+ width: 25%; 
+ height: auto; 
+ display: block; 
+ margin: auto;
+ position: absolute;
+ margin-top: -27em;
+ margin-left: 20em;
+ z-index: -10;
+}
+
+footer section:nth-of-type(1) p{
+ /*Display*/
+ position: absolute;
+ margin: 0; 
+ margin-top: -41em;
+ margin-left: 43em;
+ margin-right: 69em;
+ z-index: 10;
+
+ /*Text*/
+ font-size: 0.6em;
+ color: black;
+ text-shadow: none;
+ line-height: normal;
+}
+
+
+/****************************************/
+/* Sestion 2 - Afbeeling, tekst         */
+/****************************************/
+footer section:nth-of-type(2){
+  margin-top: 8.5em;
+}
+footer section:nth-of-type(2) img:nth-of-type(1){
+    /*Display*/
+  width: 20%; 
+  height: auto; 
+  display: block; 
+  margin: auto;
+  margin-right: 20em;
+  margin-bottom: 2.5em;
+  z-index: 10;
+}
+
+footer section:nth-of-type(2) img:nth-of-type(2){
+    /*Display*/
+  width: 20%; 
+  height: auto; 
+  display: block; 
+  margin: auto;
+  position: absolute;
+  margin-top: -20em;
+  margin-left: 13em;
+  z-index: -10;
+}
+
+footer section:nth-of-type(2) p{
+  /*Display*/
+  position: absolute;
+  margin: 0; 
+  margin-top: -29em;
+  margin-left: 24em;
+  margin-right: 49em;
+  
+  z-index: 10;
+ 
+
+  /*Text*/
+  font-size: 0.6em;
+  color: black;
+  text-shadow: none;
+  line-height: normal;
+}
+
+
+/* Media Query for smaller screens */
+@media (max-width: 360px) {
+  body {
+    background-size: contain; /* Adjust the background size for smaller screens */
+  }
+}
+
+@media (max-width: 360px) {
+  header img:nth-of-type(1) {
+    width: 60%; /* Adjust the width for smaller screens */
+    padding-top: 1em; /* Adjust the padding for smaller screens */
+    padding-left: 1em;
+  }
+}
 /* ... */
 
+/*Bronnen
 
+https://universalstudios.fandom.com/wiki/Oogway
+https://kindaedesigns.com/products/kung-fu-panda-png-instant-digital-download
+https://nl.pinterest.com/pin/139330182204196534/
+https://pt.vecteezy.com/png/24854857-aberto-velho-livro-ai-imagem-generativo

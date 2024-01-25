@@ -6,7 +6,7 @@
 }
 
 button:not([disabled]) {
-  cursor: pointer;
+  cursor:pointer;
 }
 
 
@@ -15,16 +15,14 @@ button:not([disabled]) {
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	--color-text:#ffffff;
-
-	--a-text-color: #0475a1;
-	--a-font:Arial;
-
-	--main-font-chunk: "hiro_misake", Helvetica, Arial;
+/*Body*/
+  --body-text-color:black;
+  
+/*Main*/
+	--main-font-hiro: "hiro_misake", Helvetica, Arial;
 	--main-text-color: #ffffff;
-	--main-background-color: #d7e9fa;
-
 }
+
 
 /********************/
 /* ALGEMENE STYLING */
@@ -34,37 +32,42 @@ button:not([disabled]) {
 	src: url(../assets/hiro_misake/HIROMISAKE.ttf);
 }
 
+/********************/
+/* BODY STYLING     */
+/********************/
 
 body {
-  margin: 0;
-  background-image: url(../images/back2.png),url(../images/back1.png); 
-  background-size: 100% 100%;/* breedte en hoogte*/
-  background-repeat: no-repeat;
+   /*Display*/
   min-height: 1000vh; /* minimum om te scrollen*/
   overflow-y: auto; /* Verticaal scrollen mogelijk */
   overflow-x: hidden;
+  margin: 0;
+ 
+  /*Achtergrond foto*/
+  background-image: url(../images/back2.png),url(../images/back1.png); 
+  background-size: 100% 100%;/* breedte en hoogte*/
+  background-repeat: no-repeat;
 }
 
 body p{
-  color: #ffffff;
+   /*Text*/
   font-family: "hiro_misake",'Helvetice','Ariel';
   line-height: 25px;
-  text-shadow: 2px 2px 2px #000;
-  
-  
 }
 
 body::before {
-  content: "";
-  position: absolute;
+  /*Display*/
   width: 30%;
   height: 30%;
+  position: absolute;
+  content: "";
+  overflow: hidden;
+  margin-top: 45em;
+
+  /*Achtergrond foto*/
   background-image: url(../images/wolk1.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  overflow: hidden;
-  margin-top: 45em;
-  opacity: 0.9;
 
   /* Animation */
   animation: slideAnimation 1s ease-in-out infinite;
@@ -75,22 +78,88 @@ body::before {
 
 @keyframes slideAnimation {
     0% {
-        left: -15%; /* Start position, off the left side */
+        left: -15%; 
     }
 
     50% {
-      left: 10%; /* End position, off the right side */
+      left: 10%; 
   }
     100% {
-        left: -15%; /* End position, off the right side */
+        left: -15%; 
     }
 }
 
 
+/********************/
+/* LANTERN ANIMATIE */
+/********************/
 
-/****************/
-/* HEADER */
-/****************/
+.lantern {
+  width: 50px; 
+  height: auto;
+  position: absolute;
+  z-index: 10;
+  transform-origin: top center; 
+  animation: swing 4s infinite linear;
+}
+
+.lantern1 {
+  width: 80px;
+  margin-top: 119em;
+  margin-left: 70px; 
+  animation-delay: 0.5s; 
+}
+
+.lantern2 {
+  width: 80px;
+  margin-top: 216.1em;
+  margin-left: 64.2em;
+  animation-delay: 1s; 
+}
+
+.lantern3 {
+  width: 80px;
+  margin-top: 312.15em;
+  margin-left: 8em; 
+  animation-delay: 1.5s; 
+}
+
+.lantern4 {
+  width: 80px;
+  margin-top: 407.65em;
+  margin-left: 9em; 
+  animation-delay: 1.5s; 
+}
+
+.lantern5 {
+  width: 80px;
+  margin-top: 408em;
+  margin-left: 61em;
+  animation-delay: 1.5s; 
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-15deg); 
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(15deg); 
+  }
+}
+
+
+/******************/
+/* HEADER STYLING */
+/******************/
 header{
   /*Display*/
   display:grid;
@@ -103,7 +172,6 @@ header img:nth-of-type(1){
   width: 40%; 
   height: auto; 
   display: block; 
-  margin: auto;
   padding-top: 2em;
 }
 
@@ -118,7 +186,6 @@ header img:nth-of-type(2){
 header p {
    /*Display*/
   position: absolute;
-  margin: 0; 
   margin-top: 13em;
   margin-left: 8em;
   margin-right: 47em;
@@ -126,7 +193,6 @@ header p {
 
   /*Text*/
   font-size: 1em;
- 
 }
 
 header img:nth-of-type(3){
@@ -134,7 +200,6 @@ header img:nth-of-type(3){
   width: 30%; 
   height: auto; 
   display: block; 
-  margin: auto;
   position: absolute;
   margin-top: 10em;
   margin-left: 40em;
@@ -143,7 +208,6 @@ header img:nth-of-type(3){
 	animation-name: slide;
 	animation-duration: 5s;
 	animation-iteration-count:1;
- 
 }
 
   @keyframes slide {
@@ -154,253 +218,242 @@ header img:nth-of-type(3){
     100% {
       transform:translateX(0);
     }
-  }
+}
  
 
 
 
 /****************/
-/* MAIN */
+/* MAIN STYLING */
 /****************/
 
-main section{
+main section {
+  /*Display*/
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top:90em;
 }
 
-/****************************************/
+main section:not(:first-child) {
+  /*Display*/
+  margin-top: 10em; 
+}
+
+main section:nth-of-type(3),
+main section:nth-of-type(5) {
+  /*Display*/
+  margin-top: 40em; 
+}
+
+
+/**********************************8******/
 /* Section 1 - Afbeelding, tekst en knop */
-/****************************************/
-main section:nth-of-type(1) {
-  margin-top: 66em;
-}
-
+/*****************************************/
 main section:nth-of-type(1) img:nth-of-type(1) {
+  /*Display*/
   width: 80%;
-  margin-left: 11em;
-  margin-top: 1.5em;
+  margin-left: 14em;
 }
 
 main section:nth-of-type(1) img:nth-of-type(2) {
-  width: 50%;
-  margin-top: -2em;
-  margin-left: 6em;
-}
-
-main section:nth-of-type(1) p {
-  font-size: 1em;
-  position: absolute;
-  margin-top: 4em;
-  margin-left: 16em;
-  margin-right: 42em;
-
-}
-
-/****************************************/
-/* Section 2 - Afbeelding, tekst en knop */
-/****************************************/
-main section:nth-of-type(2) {
- margin-top: 10em;
-}
-
-main section:nth-of-type(2) img:nth-of-type(1) {
-  width: 55%;
-  margin-left: 11em;
- margin-top: -7em;
-}
-
-main section:nth-of-type(2) img:nth-of-type(2) {
-  width: 80%;
-  margin-left: -5em;
-  margin-top: -5em;
-}
-
-main section:nth-of-type(2) p {
-  font-size: 1em;
-  position: absolute;
-  margin-left: 40em;
-  margin-right: 19em;
-  margin-top: -2.5em;
-
-}
-
-/****************************************/
-/* Section 3 - Afbeelding, tekst en knop */
-/****************************************/
-main section:nth-of-type(3) {
-  margin-top: 25em;
-}
-
-main section:nth-of-type(3) img:nth-of-type(1) {
-  width: 80%;
-  margin-top: 5em;
-  margin-left: 10.5em;
-}
-
-main section:nth-of-type(3) img:nth-of-type(2) {
-  width: 50%;
+  /*Display*/
+  width: 60%;
   margin-left: 4em;
 }
 
-main section:nth-of-type(3) p {
+main section:nth-of-type(1) p {
+  /*Display*/
+  font-size: 0.9em;
+  position: absolute;
+  padding-top: 4em;
+  padding-left: 19.5em;
+  padding-right: 42.5em;
+}
+
+/*****************************************/
+/* Section 2 - Afbeelding, tekst en knop */
+/*****************************************/
+main section:nth-of-type(2) img:nth-of-type(1) {
+  /*Display*/
+  width: 55%;
+  margin-left: 11em;
+}
+
+main section:nth-of-type(2) img:nth-of-type(2) {
+  /*Display*/
+  width: 80%;
+  margin-left: -6em;
+}
+
+main section:nth-of-type(2) p {
+  /*Display*/
   font-size: 1em;
   position: absolute;
-  margin-top: 7.5em;
-  margin-left: 17em;
-  margin-right: 42em;
-
+  padding-top: 3em;
+  padding-left: 39.5em;
+  padding-right: 17.5em;
 }
 
-/****************************************/
+/*****************************************/
+/* Section 3 - Afbeelding, tekst en knop */
+/************************************8****/
+main section:nth-of-type(3) img:nth-of-type(1) {
+  /*Display*/
+  width: 80%;
+  margin-left: 14em;
+}
+
+main section:nth-of-type(3) img:nth-of-type(2) {
+  /*Display*/
+  width: 65%;
+  margin-left: 1em;
+}
+
+main section:nth-of-type(3) p {
+  /*Display*/
+  font-size: 1em;
+  position: absolute;
+  padding-top: 2.5em;
+  padding-left: 20em;
+  padding-right: 39em;
+}
+
+/*****************************************/
 /* Section 4 - Afbeelding, tekst en knop */
-/****************************************/
-main section:nth-of-type(4) {
-  margin-top: 5em;
-}
-
+/*****************************************/
 main section:nth-of-type(4) img:nth-of-type(1) {
-  width: 50%;
-  margin-left: 13em;
-  margin-top: -3em;
+  /*Display*/
+  width: 55%;
+  margin-left: 12em; 
 }
 
 main section:nth-of-type(4) img:nth-of-type(2) {
+  /*Display*/
   width: 80%;
-  margin-left: -6em;
-  
+  margin-left: -7em; 
 }
 
 main section:nth-of-type(4) p {
+  /*Display*/
   font-size: 1em;
   position: absolute;
-  margin-top: 2.5em;
-  margin-left: 40em;
-  margin-right: 20em;
-  
-
- 
+  padding-top: 3.5em;
+  padding-left: 38.5em;
+  padding-right: 17.5em;
 }
 
-/****************************************/
+/*****************************************/
 /* Section 5 - Afbeelding, tekst en knop */
-/****************************************/
-main section:nth-of-type(5) {
-  margin-top: 28em;
-}
-
+/*****************************************/
 main section:nth-of-type(5) img:nth-of-type(1) {
-  width: 75%;
+  /*Display*/
+  width: 80%;
   margin-left: 14em;
-  margin-top: -1em;
 }
 
 main section:nth-of-type(5) img:nth-of-type(2) {
-  width: 45%;
-  margin-left: 6em;
-  margin-top: -2.5em;
+  /*Display*/
+  width: 50%;
+  padding-top: 2em;
+  margin-left: 4em;
 }
 
 main section:nth-of-type(5) p {
+  /*Display*/
   font-size: 1em;
   position: absolute;
-  margin-top: 2em;
-  margin-left: 19em;
-  margin-right: 41em;
-
+  padding-top: 3.5em;
+  padding-left: 17.5em;
+  padding-right: 38.5em;
 }
 
-/****************************************/
+/*****************************************/
 /* Section 6 - Afbeelding, tekst en knop */
-/****************************************/
-main section:nth-of-type(6) {
-  margin-top: 7em;
-  margin-bottom: -15em;
-}
-
+/*****************************************/
 main section:nth-of-type(6) img:nth-of-type(1) {
-  width: 45%;
-  margin-left: 15em;
-  margin-top: 4em;
+  /*Display*/
+  width: 55%;
+  margin-left: 13em;
 }
 
 main section:nth-of-type(6) img:nth-of-type(2) {
+  /*Display*/
   width: 75%;
-  margin-left: -6em;
-  margin-top: 4.5em;
-}
+  margin-left: -7em;
+ }
 
 main section:nth-of-type(6) p {
+  /*Display*/
   font-size: 1em;
   position: absolute;
-  margin-top: 6.5em;
-  margin-left: 39.5em;
-  margin-right: 20.5em;
+  padding-top: 2.3em;
+  padding-left: 39em;
+  padding-right: 19.5em;
 }
 
-
-
-
-/****************/
-/* Footer */
-/****************/
+/******************/
+/* FOOTER STYLING */
+/******************/
 footer{
+  /*Display*/
   display: flex;
   margin-top: 48em;
 }
+
 /****************************************/
 /* Sestion 1 - Afbeeling, tekst         */
 /****************************************/
 footer section:nth-of-type(1){
+  /*Display*/
   margin-top: 8em;
 }
+
 footer section:nth-of-type(1) img:nth-of-type(1){
   /*Display*/
- width: 50%; 
- height: auto; 
- display: block; 
- margin: auto;
- margin-left: 20em;
-margin-bottom: 2em;
-z-index: 10;
-
+  width: 50%; 
+  height: auto; 
+  display: block; 
+  margin-left: 20em;
+  margin-bottom: 3em;
+  z-index: 10;
 }
 
 footer section:nth-of-type(1) img:nth-of-type(2){
- width: 25%; 
- height: auto; 
- display: block; 
- margin: auto;
- position: absolute;
- margin-top: -27em;
- margin-left: 20em;
- z-index: -10;
+  /*Display*/
+  width: 25%; 
+  height: auto; 
+  display: block; 
+  position: absolute;
+  margin-top: -33em;
+  margin-left: 25em;
+  z-index: -10;
 }
 
 footer section:nth-of-type(1) p{
- /*Display*/
- position: absolute;
- margin: 0; 
- margin-top: -41em;
- margin-left: 43em;
- margin-right: 69em;
- z-index: 10;
+  /*Display*/
+  position: absolute;
+  margin-top: -42.5em;
+  margin-left: 40em;
+  margin-right: 50em;
+  z-index: 10;
 
- /*Text*/
- font-size: 0.6em;
- color: black;
- text-shadow: none;
- line-height: normal;
+  /*Text*/
+  font-size: 0.7em;
+  color: black;
+  text-shadow: none;
+  line-height: normal;
 }
-
 
 /****************************************/
 /* Sestion 2 - Afbeeling, tekst         */
 /****************************************/
 footer section:nth-of-type(2){
+  /*Display*/
   margin-top: 8.5em;
 }
+
 footer section:nth-of-type(2) img:nth-of-type(1){
-    /*Display*/
+  /*Display*/
   width: 20%; 
   height: auto; 
   display: block; 
@@ -411,13 +464,12 @@ footer section:nth-of-type(2) img:nth-of-type(1){
 }
 
 footer section:nth-of-type(2) img:nth-of-type(2){
-    /*Display*/
+  /*Display*/
   width: 20%; 
   height: auto; 
   display: block; 
-  margin: auto;
   position: absolute;
-  margin-top: -20em;
+  margin-top: -23.5em;
   margin-left: 13em;
   z-index: -10;
 }
@@ -425,22 +477,21 @@ footer section:nth-of-type(2) img:nth-of-type(2){
 footer section:nth-of-type(2) p{
   /*Display*/
   position: absolute;
-  margin: 0; 
-  margin-top: -29em;
-  margin-left: 24em;
-  margin-right: 49em;
-  
+  margin-top: -30em;
+  margin-left: 21.5em;
+  margin-right: 39.5em;
   z-index: 10;
  
-
   /*Text*/
-  font-size: 0.6em;
+  font-size: 0.7em;
   color: black;
   text-shadow: none;
   line-height: normal;
 }
 
-
+/***************/
+/* MEDIA QUERY */
+/***************/
 /* Media Query for smaller screens */
 @media (max-width: 360px) {
   body {
@@ -455,11 +506,15 @@ footer section:nth-of-type(2) p{
     padding-left: 1em;
   }
 }
-/* ... */
+
 
 /*Bronnen
 
-https://universalstudios.fandom.com/wiki/Oogway
-https://kindaedesigns.com/products/kung-fu-panda-png-instant-digital-download
-https://nl.pinterest.com/pin/139330182204196534/
-https://pt.vecteezy.com/png/24854857-aberto-velho-livro-ai-imagem-generativo
+https://en.m.wikipedia.org/wiki/File:Kung_Fu_Panda_logo.svg
+https://hero.fandom.com/wiki/Shifu
+https://hero.fandom.com/wiki/Tigress
+https://universal-pictures.fandom.com/wiki/Monkey
+https://www.deviantart.com/jakeysamra/art/Mantis-Kung-Fu-Panda-PNG-953395816
+https://www.deviantart.com/jakeysamra/art/Viper-Kung-Fu-Panda-PNG-953395820
+https://universal-pictures.fandom.com/wiki/Crane
+https://www.dafont.com/hiro-misake.font

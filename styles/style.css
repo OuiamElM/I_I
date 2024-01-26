@@ -105,35 +105,35 @@ body::before {
 
 .lantern1 {
   width: 80px;
-  margin-top: 119em;
+  margin-top: 96em;
   margin-left: 70px; 
   animation-delay: 0.5s; 
 }
 
 .lantern2 {
   width: 80px;
-  margin-top: 216.1em;
+  margin-top: 174.5em;
   margin-left: 64.2em;
   animation-delay: 1s; 
 }
 
 .lantern3 {
   width: 80px;
-  margin-top: 312.15em;
+  margin-top: 252em;
   margin-left: 8em; 
   animation-delay: 1.5s; 
 }
 
 .lantern4 {
   width: 80px;
-  margin-top: 407.65em;
+  margin-top: 329em;
   margin-left: 9em; 
   animation-delay: 1.5s; 
 }
 
 .lantern5 {
   width: 80px;
-  margin-top: 408em;
+  margin-top: 329.5em;
   margin-left: 61em;
   animation-delay: 1.5s; 
 }
@@ -398,7 +398,7 @@ main section:nth-of-type(6) p {
 /* FOOTER STYLING */
 /******************/
 footer {
-
+margin-top: 34em;
 }
 
 

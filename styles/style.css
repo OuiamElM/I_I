@@ -231,18 +231,18 @@ main section {
   /*Display*/
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top:90em;
+  margin-top:65em;
 }
 
 main section:not(:first-child) {
   /*Display*/
-  margin-top: 10em; 
+  margin-top: 5em; 
 }
 
 main section:nth-of-type(3),
 main section:nth-of-type(5) {
   /*Display*/
-  margin-top: 40em; 
+  margin-top: 25em; 
 }
 
 
@@ -391,14 +391,17 @@ main section:nth-of-type(6) p {
   padding-right: 19.5em;
 }
 
+
+
+/*
 /******************/
 /* FOOTER STYLING */
 /******************/
-footer{
-  /*Display*/
-  display: flex;
-  margin-top: 48em;
+footer {
+
 }
+
+
 
 /****************************************/
 /* Sestion 1 - Afbeeling, tekst         */
@@ -410,31 +413,34 @@ footer section:nth-of-type(1){
 
 footer section:nth-of-type(1) img:nth-of-type(1){
   /*Display*/
-  width: 50%; 
+  position: absolute;
+  width: 20%; 
   height: auto; 
-  display: block; 
-  margin-left: 20em;
+  display: block;
+  margin-top: -2.5em;
+  margin-left: 18em;
   margin-bottom: 3em;
   z-index: 10;
 }
 
 footer section:nth-of-type(1) img:nth-of-type(2){
   /*Display*/
-  width: 25%; 
+  
+  width: 15%; 
   height: auto; 
   display: block; 
   position: absolute;
-  margin-top: -33em;
-  margin-left: 25em;
+  margin-top: 6.5em;
+  margin-left: 24em;
   z-index: -10;
 }
 
 footer section:nth-of-type(1) p{
   /*Display*/
   position: absolute;
-  margin-top: -42.5em;
-  margin-left: 40em;
-  margin-right: 50em;
+  margin-top: -0.5em;
+  margin-left: 29em;
+  margin-right: 69em;
   z-index: 10;
 
   /*Text*/
@@ -449,8 +455,11 @@ footer section:nth-of-type(1) p{
 /****************************************/
 footer section:nth-of-type(2){
   /*Display*/
-  margin-top: 8.5em;
+  margin-top: 10em;
+  margin-left: -10em;
+  z-index: -10;
 }
+ 
 
 footer section:nth-of-type(2) img:nth-of-type(1){
   /*Display*/
@@ -458,13 +467,17 @@ footer section:nth-of-type(2) img:nth-of-type(1){
   height: auto; 
   display: block; 
   margin: auto;
+  position: absolute;
+margin-top: -2em;
+  margin-left: 44em;
   margin-right: 20em;
   margin-bottom: 2.5em;
-  z-index: 10;
+  z-index: -10;
 }
 
+/*
 footer section:nth-of-type(2) img:nth-of-type(2){
-  /*Display*/
+  /*Display
   width: 20%; 
   height: auto; 
   display: block; 
@@ -472,14 +485,14 @@ footer section:nth-of-type(2) img:nth-of-type(2){
   margin-top: -23.5em;
   margin-left: 13em;
   z-index: -10;
-}
+}*/
 
 footer section:nth-of-type(2) p{
   /*Display*/
   position: absolute;
-  margin-top: -30em;
-  margin-left: 21.5em;
-  margin-right: 39.5em;
+  margin-top: 1em;
+  margin-left: 65em;
+  margin-right: 45em;
   z-index: 10;
  
   /*Text*/
@@ -487,6 +500,58 @@ footer section:nth-of-type(2) p{
   color: black;
   text-shadow: none;
   line-height: normal;
+}
+
+
+/* Sestion 3 - Afbeeling, tekst         */
+/****************************************/
+
+footer section:nth-of-type(3) {
+
+}
+
+footer section:nth-of-type(3) img:nth-of-type(1) {
+  width: 15%;
+  position: absolute;
+  margin-left: 50em;
+ 
+  z-index: -10;
+ 
+
+}
+
+footer section:nth-of-type(3) p {
+  font-size: 10px;
+  text-align: center;
+  line-height: 10px;
+ padding-top: 2em;
+  margin-left: 85em;
+  margin-right: 32em;
+ 
+}
+
+footer section:nth-of-type(3) button {
+  margin-left: 60.5em;
+
+
+  font-size: 14px;
+  cursor: pointer;
+  background-color: yellow;
+  color: black;
+  border: 1px solid darkred;
+  border-radius: 5px;
+  padding: 2.5px 5px;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 10;
+}
+
+
+#firstImage[style="display: block;"],
+#secondImage[style="display: block;"],
+#thirdImage[style="display: block;"] {
+  width: 15%;
+  margin-left: 43em;
+  margin-bottom: 3em;
 }
 
 /***************/
@@ -518,3 +583,5 @@ https://www.deviantart.com/jakeysamra/art/Mantis-Kung-Fu-Panda-PNG-953395816
 https://www.deviantart.com/jakeysamra/art/Viper-Kung-Fu-Panda-PNG-953395820
 https://universal-pictures.fandom.com/wiki/Crane
 https://www.dafont.com/hiro-misake.font
+https://gallery.yopriceville.com/Free-Clipart-Pictures/Cartoons-PNG/Transparent_Kung_Fu_Panda_PNG_Clip_Art_Image
+https://gallery.yopriceville.com/Free-Clipart-Pictures/Cartoons-PNG/Transparent_Kung_Fu_Panda_PNG_Clip_Art_Image

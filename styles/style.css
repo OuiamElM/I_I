@@ -392,16 +392,14 @@ main section:nth-of-type(6) p {
 }
 
 
-
 /*
 /******************/
 /* FOOTER STYLING */
 /******************/
 footer {
-margin-top: 34em;
+  /*Display*/
+  margin-top: 34em;
 }
-
-
 
 /****************************************/
 /* Sestion 1 - Afbeeling, tekst         */
@@ -413,10 +411,10 @@ footer section:nth-of-type(1){
 
 footer section:nth-of-type(1) img:nth-of-type(1){
   /*Display*/
-  position: absolute;
   width: 20%; 
   height: auto; 
   display: block;
+  position: absolute;
   margin-top: -2.5em;
   margin-left: 18em;
   margin-bottom: 3em;
@@ -425,7 +423,6 @@ footer section:nth-of-type(1) img:nth-of-type(1){
 
 footer section:nth-of-type(1) img:nth-of-type(2){
   /*Display*/
-  
   width: 15%; 
   height: auto; 
   display: block; 
@@ -450,6 +447,7 @@ footer section:nth-of-type(1) p{
   line-height: normal;
 }
 
+
 /****************************************/
 /* Sestion 2 - Afbeeling, tekst         */
 /****************************************/
@@ -460,32 +458,18 @@ footer section:nth-of-type(2){
   z-index: -10;
 }
  
-
 footer section:nth-of-type(2) img:nth-of-type(1){
   /*Display*/
   width: 20%; 
   height: auto; 
   display: block; 
-  margin: auto;
   position: absolute;
-margin-top: -2em;
+  margin-top: -2em;
   margin-left: 44em;
   margin-right: 20em;
   margin-bottom: 2.5em;
   z-index: -10;
 }
-
-/*
-footer section:nth-of-type(2) img:nth-of-type(2){
-  /*Display
-  width: 20%; 
-  height: auto; 
-  display: block; 
-  position: absolute;
-  margin-top: -23.5em;
-  margin-left: 13em;
-  z-index: -10;
-}*/
 
 footer section:nth-of-type(2) p{
   /*Display*/
@@ -502,56 +486,61 @@ footer section:nth-of-type(2) p{
   line-height: normal;
 }
 
-
+/****************************************/
 /* Sestion 3 - Afbeeling, tekst         */
 /****************************************/
 
-footer section:nth-of-type(3) {
-
-}
-
 footer section:nth-of-type(3) img:nth-of-type(1) {
+  /*Display*/
   width: 15%;
   position: absolute;
   margin-left: 50em;
- 
   z-index: -10;
- 
-
 }
 
 footer section:nth-of-type(3) p {
+  /*Display*/
+  margin-left: 85em;
+  margin-right: 32em;
+  padding-top: 2em;
+  /*Text*/
   font-size: 10px;
   text-align: center;
   line-height: 10px;
- padding-top: 2em;
-  margin-left: 85em;
-  margin-right: 32em;
  
 }
-
 footer section:nth-of-type(3) button {
+  /*Display*/
   margin-left: 60.5em;
-
-
-  font-size: 14px;
   cursor: pointer;
   background-color: yellow;
-  color: black;
   border: 1px solid darkred;
   border-radius: 5px;
   padding: 2.5px 5px;
   transition: background-color 0.3s ease-in-out;
   z-index: 10;
+
+  /*Text*/
+  font-size: 14px;
+  color: black;
 }
 
-
-#firstImage[style="display: block;"],
-#secondImage[style="display: block;"],
-#thirdImage[style="display: block;"] {
+#firstImage[style="display: block;"]{
+  /*Display*/
   width: 15%;
   margin-left: 43em;
-  margin-bottom: 3em;
+}
+
+#secondImage[style="display: block;"]{
+  /*Display*/
+  width: 20%;
+  margin-left: 43em;
+}
+
+#thirdImage[style="display: block;"]{
+  /*Display*/
+  width: 17%;
+  margin-left: 43em;
 }
 
 /***************/

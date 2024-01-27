@@ -23,7 +23,6 @@ button:not([disabled]) {
 	--main-text-color: #ffffff;
 }
 
-
 /********************/
 /* ALGEMENE STYLING */
 /********************/
@@ -49,10 +48,16 @@ body {
   background-repeat: no-repeat;
 }
 
+body h1{
+  /*Text*/
+ font-family: "hiro_misake",'Helvetice','Ariel';
+ line-height: 25px;
+}
+
 body p{
    /*Text*/
   font-family: "hiro_misake",'Helvetice','Ariel';
-  line-height: 25px;
+  line-height: 20px;
 }
 
 body::before {
@@ -89,11 +94,9 @@ body::before {
     }
 }
 
-
 /********************/
 /* LANTERN ANIMATIE */
 /********************/
-
 .lantern {
   width: 50px; 
   height: auto;
@@ -156,7 +159,6 @@ body::before {
   }
 }
 
-
 /******************/
 /* HEADER STYLING */
 /******************/
@@ -177,18 +179,31 @@ header img:nth-of-type(1){
 
 header img:nth-of-type(2){
   /*Display*/
-  width: 45%; 
+  width: 46%; 
   height: auto; 
-  margin-top: 1em;
-  margin-left: -40em;
+  margin-top: 2em;
+  margin-left: -33em;
+  margin-bottom: 4em;
+}
+
+header h1 {
+  /*Display*/
+ position: absolute;
+ margin-top: 1em;
+ margin-left: 8em;
+ margin-right: 43em;
+ z-index: 10;
+
+ /*Text*/
+ font-size: 1em;
 }
 
 header p {
    /*Display*/
   position: absolute;
-  margin-top: 13em;
-  margin-left: 8em;
-  margin-right: 47em;
+  margin-top: 11em;
+  margin-left: 8.7em;
+  margin-right: 42.3em;
   z-index: 10;
 
   /*Text*/
@@ -206,7 +221,7 @@ header img:nth-of-type(3){
 
   /*Animation*/
 	animation-name: slide;
-	animation-duration: 5s;
+	animation-duration: 3s;
 	animation-iteration-count:1;
 }
 
@@ -220,13 +235,9 @@ header img:nth-of-type(3){
     }
 }
  
-
-
-
 /****************/
 /* MAIN STYLING */
 /****************/
-
 main section {
   /*Display*/
   display: grid;
@@ -244,7 +255,6 @@ main section:nth-of-type(5) {
   /*Display*/
   margin-top: 25em; 
 }
-
 
 /**********************************8******/
 /* Section 1 - Afbeelding, tekst en knop */
@@ -391,7 +401,6 @@ main section:nth-of-type(6) p {
   padding-right: 19.5em;
 }
 
-
 /*
 /******************/
 /* FOOTER STYLING */
@@ -447,7 +456,6 @@ footer section:nth-of-type(1) p{
   line-height: normal;
 }
 
-
 /****************************************/
 /* Sestion 2 - Afbeeling, tekst         */
 /****************************************/
@@ -489,7 +497,6 @@ footer section:nth-of-type(2) p{
 /****************************************/
 /* Sestion 3 - Afbeeling, tekst         */
 /****************************************/
-
 footer section:nth-of-type(3) img:nth-of-type(1) {
   /*Display*/
   width: 15%;
@@ -513,7 +520,7 @@ footer section:nth-of-type(3) button {
   /*Display*/
   margin-left: 60.5em;
   cursor: pointer;
-  background-color: yellow;
+  background-color: #ffdd00;
   border: 1px solid darkred;
   border-radius: 5px;
   padding: 2.5px 5px;
@@ -563,7 +570,6 @@ footer section:nth-of-type(3) button {
 
 
 /*Bronnen
-
 https://en.m.wikipedia.org/wiki/File:Kung_Fu_Panda_logo.svg
 https://hero.fandom.com/wiki/Shifu
 https://hero.fandom.com/wiki/Tigress

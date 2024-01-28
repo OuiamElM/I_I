@@ -10,7 +10,6 @@ button:not([disabled]) {
 }
 
 
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -23,6 +22,7 @@ button:not([disabled]) {
 	--main-text-color: #ffffff;
 }
 
+
 /********************/
 /* ALGEMENE STYLING */
 /********************/
@@ -31,12 +31,12 @@ button:not([disabled]) {
 	src: url(../assets/hiro_misake/HIROMISAKE.ttf);
 }
 
+
 /********************/
 /* BODY STYLING     */
 /********************/
-
 body {
-   /*Display*/
+  /*Display*/
   min-height: 1000vh; /* minimum om te scrollen*/
   overflow-y: auto; /* Verticaal scrollen mogelijk */
   overflow-x: hidden;
@@ -50,12 +50,12 @@ body {
 
 body h1{
   /*Text*/
- font-family: "hiro_misake",'Helvetice','Ariel';
- line-height: 25px;
+  font-family: "hiro_misake",'Helvetice','Ariel';
+  line-height: 25px;
 }
 
 body p{
-   /*Text*/
+  /*Text*/
   font-family: "hiro_misake",'Helvetice','Ariel';
   line-height: 20px;
 }
@@ -75,13 +75,12 @@ body::before {
   background-repeat: no-repeat;
 
   /* Animation */
-  animation: slideAnimation 1s ease-in-out infinite;
+  animation: slideAnimation1 1s ease-in-out infinite;
   animation-duration: 30s;
   animation-iteration-count:infinite;
 }
 
-
-@keyframes slideAnimation {
+@keyframes slideAnimation1 {
     0% {
         left: -15%; 
     }
@@ -90,9 +89,10 @@ body::before {
       left: 10%; 
   }
     100% {
-        left: -15%; 
+        left: -20%; 
     }
 }
+
 
 /********************/
 /* LANTERN ANIMATIE */
@@ -159,6 +159,7 @@ body::before {
   }
 }
 
+
 /******************/
 /* HEADER STYLING */
 /******************/
@@ -188,22 +189,33 @@ header img:nth-of-type(2){
 
 header h1 {
   /*Display*/
- position: absolute;
- margin-top: 1em;
- margin-left: 8em;
- margin-right: 43em;
- z-index: 10;
+  position: absolute;
+  margin-top: 0em;
+  margin-left: 8em;
+  margin-right: 43em;
+  z-index: 10;
 
- /*Text*/
- font-size: 1em;
+  /*Text*/
+  font-size: 1em;
 }
 
-header p {
+header p:nth-of-type(1) {
    /*Display*/
   position: absolute;
-  margin-top: 11em;
+  margin-top: 9em;
   margin-left: 8.7em;
-  margin-right: 42.3em;
+  margin-right: 43em;
+  z-index: 10;
+
+  /*Text*/
+  font-size: 1em;
+}
+
+header p:nth-of-type(2) {
+  /*Display*/
+  position: absolute;
+  margin-top: 18em;
+  margin-right: 44.5em;
   z-index: 10;
 
   /*Text*/
@@ -235,6 +247,86 @@ header img:nth-of-type(3){
     }
 }
  
+header p:nth-of-type(3) {
+  /*Display*/
+  position: absolute;
+  margin-top: -19em;
+  margin-left: 69em;
+  margin-right: 4em;
+  text-align: center;
+  z-index: 10;
+
+  /*Text*/
+  font-size: 1em;
+
+  /*Animation*/
+	animation-name: slide;
+	animation-duration: 3s;
+	animation-iteration-count:1;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(30rem);
+  }
+  
+  100% {
+    transform:translateX(0);
+  }
+}
+
+
+header img:nth-of-type(4){
+  /*Display*/
+  width: 4%; 
+  height: auto; 
+  display: block; 
+  position: absolute;
+  margin-top: -13.5em;
+  margin-left: 65em;
+
+  /*Animation*/
+	animation-name: slide;
+	animation-duration: 3s;
+	animation-iteration-count:1;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(30rem);
+  }
+  
+  100% {
+    transform:translateX(0);
+  }
+}
+
+header img:nth-of-type(5){
+  /*Display*/
+  width: 6%; 
+  height: auto; 
+  display: block; 
+  position: absolute;
+  margin-top: -30em;
+  z-index: -10;
+ 
+  /* Animation */
+  animation: slideAnimation2 1s ease-in-out infinite;
+  animation-duration: 15s;
+  animation-iteration-count:infinite;
+}
+  
+  @keyframes slideAnimation2 {
+    0% {
+        left: -15%; 
+    }
+  
+    100% {
+        left: 100%; 
+    }
+}
+
+
 /****************/
 /* MAIN STYLING */
 /****************/
@@ -256,6 +348,7 @@ main section:nth-of-type(5) {
   margin-top: 25em; 
 }
 
+
 /**********************************8******/
 /* Section 1 - Afbeelding, tekst en knop */
 /*****************************************/
@@ -275,10 +368,11 @@ main section:nth-of-type(1) p {
   /*Display*/
   font-size: 0.9em;
   position: absolute;
-  padding-top: 4em;
+  padding-top: 5em;
   padding-left: 19.5em;
   padding-right: 42.5em;
 }
+
 
 /*****************************************/
 /* Section 2 - Afbeelding, tekst en knop */
@@ -299,10 +393,11 @@ main section:nth-of-type(2) p {
   /*Display*/
   font-size: 1em;
   position: absolute;
-  padding-top: 3em;
+  padding-top: 3.7em;
   padding-left: 39.5em;
   padding-right: 17.5em;
 }
+
 
 /*****************************************/
 /* Section 3 - Afbeelding, tekst en knop */
@@ -323,10 +418,11 @@ main section:nth-of-type(3) p {
   /*Display*/
   font-size: 1em;
   position: absolute;
-  padding-top: 2.5em;
+  padding-top: 3.7em;
   padding-left: 20em;
   padding-right: 39em;
 }
+
 
 /*****************************************/
 /* Section 4 - Afbeelding, tekst en knop */
@@ -347,10 +443,11 @@ main section:nth-of-type(4) p {
   /*Display*/
   font-size: 1em;
   position: absolute;
-  padding-top: 3.5em;
+  padding-top: 4.3em;
   padding-left: 38.5em;
   padding-right: 17.5em;
 }
+
 
 /*****************************************/
 /* Section 5 - Afbeelding, tekst en knop */
@@ -372,10 +469,11 @@ main section:nth-of-type(5) p {
   /*Display*/
   font-size: 1em;
   position: absolute;
-  padding-top: 3.5em;
+  padding-top: 4.5em;
   padding-left: 17.5em;
   padding-right: 38.5em;
 }
+
 
 /*****************************************/
 /* Section 6 - Afbeelding, tekst en knop */
@@ -396,10 +494,11 @@ main section:nth-of-type(6) p {
   /*Display*/
   font-size: 1em;
   position: absolute;
-  padding-top: 2.3em;
+  padding-top: 3.2em;
   padding-left: 39em;
   padding-right: 19.5em;
 }
+
 
 /*
 /******************/
@@ -409,6 +508,7 @@ footer {
   /*Display*/
   margin-top: 34em;
 }
+
 
 /****************************************/
 /* Sestion 1 - Afbeeling, tekst         */
@@ -456,6 +556,7 @@ footer section:nth-of-type(1) p{
   line-height: normal;
 }
 
+
 /****************************************/
 /* Sestion 2 - Afbeeling, tekst         */
 /****************************************/
@@ -494,10 +595,11 @@ footer section:nth-of-type(2) p{
   line-height: normal;
 }
 
+
 /****************************************/
 /* Sestion 3 - Afbeeling, tekst         */
 /****************************************/
-footer section:nth-of-type(3) img:nth-of-type(1) {
+footer section:nth-of-type(3) img:nth-of-type(1){
   /*Display*/
   width: 15%;
   position: absolute;
@@ -505,31 +607,40 @@ footer section:nth-of-type(3) img:nth-of-type(1) {
   z-index: -10;
 }
 
-footer section:nth-of-type(3) p {
+footer section:nth-of-type(3) p{
   /*Display*/
   margin-left: 85em;
   margin-right: 32em;
   padding-top: 2em;
+
   /*Text*/
   font-size: 10px;
   text-align: center;
   line-height: 10px;
- 
 }
-footer section:nth-of-type(3) button {
+
+footer section:nth-of-type(3) button{
   /*Display*/
   margin-left: 60.5em;
   cursor: pointer;
-  background-color: #ffdd00;
-  border: 1px solid darkred;
   border-radius: 5px;
   padding: 2.5px 5px;
   transition: background-color 0.3s ease-in-out;
   z-index: 10;
+  background-color: #ffdd00;
+  border: 1px solid darkred;
 
   /*Text*/
   font-size: 14px;
   color: black;
+}
+
+footer section:nth-of-type(3) button:hover{
+  background-color: darkorange;
+}
+
+footer section:nth-of-type(3) button:active{
+  background-color: orangered;
 }
 
 #firstImage[style="display: block;"]{
@@ -549,6 +660,7 @@ footer section:nth-of-type(3) button {
   width: 17%;
   margin-left: 43em;
 }
+
 
 /***************/
 /* MEDIA QUERY */
@@ -580,3 +692,11 @@ https://universal-pictures.fandom.com/wiki/Crane
 https://www.dafont.com/hiro-misake.font
 https://gallery.yopriceville.com/Free-Clipart-Pictures/Cartoons-PNG/Transparent_Kung_Fu_Panda_PNG_Clip_Art_Image
 https://gallery.yopriceville.com/Free-Clipart-Pictures/Cartoons-PNG/Transparent_Kung_Fu_Panda_PNG_Clip_Art_Image
+https://www.fesliyanstudios.com/royalty-free-music/downloads-c/chinese-music/61
+https://www.vecteezy.com/vector-art/3042262-black-bird-silhouette-against-white-background-no-sky
+https://www.vecteezy.com/vector-art/605888-chinese-theme-background-with-temple-buildings
+https://www.vecteezy.com/vector-art/21493582-street-in-chinatown-with-cherry-blossom-landscape
+https://www.vecteezy.com/vector-art/23869852-chinese-village-street-with-old-typical-houses
+https://www.vecteezy.com/vector-art/21935410-old-scroll-papyrus-parchment-paper-map-background
+https://www.vecteezy.com/vector-art/106133-free-chinese-clouds-pattern-vector
+https://www.vecteezy.com/vector-art/1176862-chinese-lantern-element
